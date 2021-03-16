@@ -122,7 +122,7 @@ function setupMainWindow() {
     minWidth: 800, minHeight: 480,
     useContentSize: true, autoHideMenuBar: true,
     show: false,
-    webPreferences: { nodeIntegration: true, webviewTag: true }
+    webPreferences: { nodeIntegration: true, webviewTag: true, enableRemoteModule: true }
   });
 
   mainWindow.loadURL(`file://${__dirname}/renderer/${i18n.getLocalizedFilename("index.html")}`);

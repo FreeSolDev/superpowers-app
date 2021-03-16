@@ -1,6 +1,10 @@
 {
   "name": "superpowers-app",
-  "version": "6.1.0",
+  "version": "6.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/togimaro/superpowers-app"
+  },
   "scripts": {
     "prebuild": "npm install",
     "build": "gulp",
@@ -13,8 +17,8 @@
     "dnd-tree-view": "^4.0.0",
     "escape-html": "^1.0.3",
     "follow-redirects": "^1.7.0",
-    "lodash": "^4.17.15",
-    "mkdirp": "^0.5.1",
+    "lodash": "^4.17.21",
+    "mkdirp": "^1.0.4",
     "resize-handle": "^5.0.0",
     "simple-dialogs": "^2.0.0",
     "slate-irc": "^0.9.0",
@@ -29,8 +33,8 @@
     "@types/node": "^11.10.4",
     "@types/slate-irc": "0.0.28",
     "@types/yargs": "^12.0.9",
-    "electron": "^7.1.4",
-    "gulp": "^4.0.0",
+    "electron": "^9.4.4",
+    "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-stylus": "^2.7.0",
