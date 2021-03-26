@@ -102,6 +102,7 @@ namespace SupApp {
       icon: `${__dirname}/../superpowers.ico`,
       useContentSize: true, autoHideMenuBar: true,
       resizable: options.resizable,
+      frame: false,
       webPreferences: { nodeIntegration: false, preload: `${__dirname}/index.js`, enableRemoteModule: true }
     };
 

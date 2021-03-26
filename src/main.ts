@@ -121,6 +121,7 @@ function setupMainWindow() {
     width: 1000, height: 600, icon: `${__dirname}/superpowers.ico`,
     minWidth: 800, minHeight: 480,
     useContentSize: true, autoHideMenuBar: true,
+    frame: false,
     show: false,
     webPreferences: { nodeIntegration: true, webviewTag: true, enableRemoteModule: true }
   });

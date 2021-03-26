@@ -1,6 +1,6 @@
 {
   "name": "superpowers-app",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/togimaro/superpowers-app"
@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "npm install",
     "build": "gulp",
+    "gulp": "gulp",
     "start": "electron public --core-path=\"../core\"",
     "package": "node scripts/package.js"
   },

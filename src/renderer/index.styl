@@ -90,6 +90,7 @@ body > .sidebar .me {
   align-items: center;
   padding: 0.5em;
   border-bottom: 1px solid #ccc;
+  -webkit-app-region: drag;
 
   .picture {
     background: #ddd;
@@ -111,11 +112,16 @@ body > .sidebar .me {
     overflow-x: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+    -webkit-app-region: no-drag;
   }
 
   .presence {
     display: flex;
     align-items: baseline;
+
+    select {    
+      -webkit-app-region: no-drag;
+    }
 
     .show-chat-status {
       visibility: hidden;
@@ -125,6 +131,7 @@ body > .sidebar .me {
       background: transparent;
       box-shadow: none;
       opacity: 0.5;
+      -webkit-app-region: no-drag;
     }
     &:hover .show-chat-status { visibility: visible; }
   }
@@ -169,13 +176,26 @@ body > .sidebar .local-server {
 }
 
 body > .main {
-  flex: 1 1 0;
+  flex: 1;
   display: flex;
   flex-flow: column;
 
+  .top {
+    display: flex;
+    flex-shrink: 0;
+    background: #eee;
+    height: 36px;
+    -webkit-app-region: drag;
+  }
+
   .tabs-bar {
+    flex: 1;
     background: #eee;
     border-bottom: 1px solid #aaa;
+
+    .tab-strip li {
+      -webkit-app-region: no-drag;
+    }
   }
 }
 
@@ -219,5 +239,37 @@ body .panes {
       padding: 1em;
       text-align: center;
     }
+  }
+}
+
+.top .controls {
+  border-bottom: 1px solid #aaa;
+
+  button {
+    width: 30px;
+    height: 25px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-app-region: no-drag;
+  }
+
+  .minimize {
+    background: url(images/controls/minimize-window.svg);
+    &:hover { background: url(images/controls/minimize-window-hover.svg); }
+    &:active { background: url(images/controls/minimize-window-active.svg); }
+  }
+
+  .maximize {
+    background: url(images/controls/maximize-window.svg);
+    &:hover { background: url(images/controls/maximize-window-hover.svg); }
+    &:active { background: url(images/controls/maximize-window-active.svg); }
+  }
+
+  .close {
+    background: url(images/controls/close-window.svg);
+    &:hover { background: url(images/controls/close-window-hover.svg); }
+    &:active { background: url(images/controls/close-window-active.svg); }
   }
 }

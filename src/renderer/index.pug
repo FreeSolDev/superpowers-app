@@ -44,10 +44,16 @@ html
     .resize-handle.left
 
     .main
-      .tabs-bar
-        ol.tab-strip
-          li(data-name="home").active.pinned
-            img.icon(src="images/tabs/home.svg")
+      .top
+        .tabs-bar
+          ol.tab-strip
+            li(data-name="home").active.pinned
+              img.icon(src="images/tabs/home.svg")
+        .controls
+          button.minimize
+          button.maximize
+          button.close
+      
       .panes
         .home(data-name="home")
           include home/index

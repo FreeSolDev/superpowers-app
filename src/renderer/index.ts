@@ -27,6 +27,16 @@ const namespaces = [
 ];
 
 function onInitialize(sender: any, corePath: string, userDataPath: string, languageCode: string) {
+  const minimizeButton = document.querySelector(".top .controls button.minimize") as HTMLButtonElement;
+  minimizeButton.addEventListener("click", () => { electron.remote.getCurrentWindow().minimize(); });
+  const maximizeButton = document.querySelector(".top .controls button.maximize") as HTMLButtonElement;
+  maximizeButton.addEventListener("click", () => {
+    const window = electron.remote.getCurrentWindow();
+    window.isMaximized() ? window.unmaximize() : window.maximize();
+  });
+  const closeButton = document.querySelector(".top .controls button.close") as HTMLButtonElement;
+  closeButton.addEventListener("click", () => { electron.remote.getCurrentWindow().close(); });
+
   settings.setPaths(corePath, userDataPath);
   i18n.setLanguageCode(languageCode);
   i18n.load(namespaces, () => { settings.load(onSettingsLoaded); });
