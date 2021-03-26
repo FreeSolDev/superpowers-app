@@ -30,7 +30,7 @@ export function checkForUpdates(callback: (err: Error) => void) {
 function checkAppUpdate(callback: (err: Error) => void) {
   if (electron.remote.app.getVersion() === "0.0.0-dev") { callback(null); return; }
 
-  fetch(`https://api.github.com/repos/superpowers/superpowers-app/releases/latest`, { type: "json" }, (err, lastRelease) => {
+  fetch(`https://api.github.com/repos/togimaro/superpowers-app/releases/latest`, { type: "json" }, (err, lastRelease) => {
     if (err != null) { callback(err); return; }
     if (lastRelease.tag_name === appVersion) { callback(null); return; }
 
@@ -42,7 +42,7 @@ function checkAppUpdate(callback: (err: Error) => void) {
 
     new dialogs.ConfirmDialog(label, options, (shouldDownload) => {
       if (shouldDownload) {
-        electron.shell.openExternal("https://github.com/superpowers/superpowers-app/releases/latest");
+        electron.shell.openExternal("https://github.com/togimaro/superpowers-app/releases/latest");
         electron.remote.app.quit();
         return;
       }
@@ -140,24 +140,26 @@ function firstCoreInstall(callback: (error: Error) => void) {
 
             const filename = path.join(settings.corePath, entry.fileName.replace(rootFolderName, ""));
             if (/\/$/.test(entry.fileName)) {
-              mkdirp(filename, (err) => {
-                if (err != null) throw err;
+              mkdirp(filename).then(() => {
                 entriesProcessed++;
                 splashScreen.setProgressValue(zipFile.entryCount + entriesProcessed);
                 zipFile.readEntry();
+              }, (err) => {
+                if (err != null) throw err;
               });
             } else {
               zipFile.openReadStream(entry, (err: Error, readStream: NodeJS.ReadableStream) => {
                 if (err) throw err;
 
-                mkdirp(path.dirname(filename), (err: Error) => {
-                  if (err) throw err;
+                mkdirp(path.dirname(filename)).then(() => {
                   readStream.pipe(fs.createWriteStream(filename));
                   readStream.on("end", () => {
                     entriesProcessed++;
                     splashScreen.setProgressValue(zipFile.entryCount + entriesProcessed);
                     zipFile.readEntry();
                   });
+                }, (err) => {
+                  if (err) throw err;
                 });
               });
             }

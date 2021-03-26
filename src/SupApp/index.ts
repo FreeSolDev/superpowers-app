@@ -102,7 +102,7 @@ namespace SupApp {
       icon: `${__dirname}/../superpowers.ico`,
       useContentSize: true, autoHideMenuBar: true,
       resizable: options.resizable,
-      webPreferences: { nodeIntegration: false, preload: `${__dirname}/index.js` }
+      webPreferences: { nodeIntegration: false, preload: `${__dirname}/index.js`, enableRemoteModule: true }
     };
 
     if (options.size != null) {
@@ -117,6 +117,12 @@ namespace SupApp {
 
     const window = new electron.remote.BrowserWindow(electronWindowOptions);
 
+    // workaround for https://github.com/electron/electron/issues/25012
+    window.on("close", () => {
+      if (window.webContents.isDevToolsOpened())
+        window.webContents.closeDevTools();
+      window.destroy();
+    });
     window.webContents.on("will-navigate", (event: Event) => { event.preventDefault(); });
     window.loadURL(url);
     return window;
@@ -166,7 +172,11 @@ namespace SupApp {
         return;
       }
 
-      fsMkdirp(normalizedFolderPath, callback);
+      fsMkdirp(normalizedFolderPath).then(() => {
+        callback(null);
+      }, (err) => {
+        callback(err);
+      });
     });
   }
 
