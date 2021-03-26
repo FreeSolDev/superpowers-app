@@ -37,6 +37,7 @@ interface OpenWindowOptions {
   size?: { width: number; height: number; };
   minSize?: { width: number; height: number; };
   resizable?: boolean;
+  frame?: boolean;
 }
 
 function onFolderChosen(event: Electron.Event, ipcId: string, folderPath: string) {
@@ -97,12 +98,13 @@ namespace SupApp {
     }
 
     if (options.resizable == null) options.resizable = true;
+    if (options.frame == null) options.frame = false;
 
     const electronWindowOptions: Electron.BrowserWindowConstructorOptions = {
       icon: `${__dirname}/../superpowers.ico`,
       useContentSize: true, autoHideMenuBar: true,
       resizable: options.resizable,
-      frame: false,
+      frame: options.frame,
       webPreferences: { nodeIntegration: false, preload: `${__dirname}/index.js`, enableRemoteModule: true }
     };
 
