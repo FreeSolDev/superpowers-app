@@ -1,6 +1,7 @@
 import * as ResizeHandle from "resize-handle";
 
-new ResizeHandle(document.querySelector(".server-log") as HTMLDivElement, "bottom");
+// new ResizeHandle(document.querySelector(".server-log") as HTMLDivElement, "bottom");
+setupCollapsablePane(document.querySelector(".server-log"));
 
 const settingsElt = document.querySelector(".server-settings") as HTMLDivElement;
 const logTextarea = settingsElt.querySelector(".server-log textarea") as HTMLTextAreaElement;
@@ -16,4 +17,28 @@ function onClearLogButtonClick(event: MouseEvent) {
   event.preventDefault();
 
   logTextarea.value = "";
+}
+
+// todo : refacto with the one in Sup.Client ?
+function setupCollapsablePane(paneElt: HTMLDivElement, refreshCallback?: Function) {
+  const handle = new ResizeHandle(paneElt, "bottom");
+  if (refreshCallback != null)
+    handle.on("drag", () => { refreshCallback(); });
+
+  const statusElt = paneElt.querySelector(".header") as HTMLDivElement;
+
+  const buttonElt = document.createElement("button");
+  buttonElt.classList.add("toggle");
+  statusElt.appendChild(buttonElt);
+
+  const contentElt = paneElt.querySelector(".content") as HTMLDivElement;
+  const collaspe = (collapsed: boolean) => {
+    contentElt.hidden = collapsed;
+    buttonElt.textContent = collapsed ? "+" : "–";
+
+    if (refreshCallback != null) refreshCallback();
+  };
+
+  collaspe(paneElt.classList.contains("collapsed"));
+  statusElt.addEventListener("click", (event) => { collaspe(paneElt.classList.toggle("collapsed")); });
 }

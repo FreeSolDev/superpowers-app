@@ -139,9 +139,14 @@
   }
 }
 
-.collapsable {
+.resize-handle {
+  z-index: 15;  
+}
+
+.server-log.collapsable {
   display: flex;
   flex-flow: column;
+  min-height: 100px;
 
   .header {
     cursor: pointer;
@@ -156,6 +161,8 @@
     padding: .5em;
   }
   
+  .header .actions { padding-left: 0.25em; }
+  
   .header button.toggle {
     width: 30px;
     align-self: stretch;
@@ -169,18 +176,18 @@
     cursor: pointer;
     color: #fff;
   }
-}
 
-.server-log {
-  min-height: 100px;
-  height: 140px;
-
-  .header .actions { padding-left: 0.25em;}
-
-  textarea {
+  .content {
     flex: 1;
-    border: none;
-    resize: none;
-    padding: 0.5em;
+
+    textarea {
+      overflow-y: scroll;
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      border: none;
+      resize: none;
+      padding: 0.5em;
+    }
   }
 }
