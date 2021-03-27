@@ -70,7 +70,7 @@ function checkCoreUpdate(callback: (err: Error) => void) {
 }
 
 export function getCoreDownloadURL(callback: (err: Error, downloadURL?: string) => any) {
-  const registryUrl = "https://raw.githubusercontent.com/superpowers/superpowers-registry/master/registry.json";
+  const registryUrl = "https://raw.githubusercontent.com/togimaro/superpowers-registry/master/registry.json";
   const request = https.get(registryUrl, (res) => {
     if (res.statusCode !== 200) {
       callback(new Error(`Unexpected status code: ${res.statusCode}`));
