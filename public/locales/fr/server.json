@@ -1,5 +1,59 @@
 {
   "myServer": "Mon Serveur",
   "autoConfigured": "(configuré automatiquement)",
-  "log": "Journal du serveur"
+  "log": "Journal du serveur",
+
+  "status": {
+  	"starting": "Démarrage...",
+  	"started": "Serveur démarré",
+  	"stopping": "Arrêt...",
+  	"stopped": "Serveur arrêté",
+    "updating": "Mise à jour..."
+  },
+
+  "buttons": {
+    "settings": "Config.",
+    "start": "Démarrer",
+    "stop": "Arrêter"
+  },
+
+  "settings": {
+    "title": "Configuration du serveur",
+    "error": "Impossible de charger les paramètres",
+    "serverMustBeStopped": "Le serveur doit être arrêté avant d'éditer la configuration.",
+
+    "general": {
+      "title": "Général",
+
+      "serverName": "Nom du serveur",
+      "mainPort": "Port principal",
+      "buildPort": "Port de compilation",
+
+      "autoStart": "Démarrer automatiquement le serveur au lancement de l'application"
+    },
+
+    "storage": {
+      "title": "Stockage",
+      "openProjectsFolder": "Ouvrir le dossier projects",
+      "recentBuilds": "Compilations récentes à conserver"
+    },
+
+    "authentication": {
+      "title": "Authentification",
+      "openToInternet": "Ouvrir le serveur à Internet",
+      "password": "Mot de passe",
+
+      "guestAccount": "Autoriser les comptes invités temporaire",
+      "localAccount": "Enable local account creation",
+      "externalServices": "Enable login with external services"
+    }
+  },
+  
+  "systems": {
+    "title": "Systèmes et plugins",
+    "updateAll": "Tout mettre à jour",
+    "installed": "Version installé",
+    "latest": "Dernière version",
+    "releaseNotes": "Notes de version"
+  }
 }

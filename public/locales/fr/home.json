@@ -1,3 +1,22 @@
 {
-  "title": "Accueil"
+  "title": "Accueil",
+
+  "news": {
+    "couldNotFetch": "Impossible de récuperer les dernières actualités"
+  },
+
+  "chatrooms": {
+    "title": "Salon de discussion",
+
+    "en": "Anglais",
+    "fr": "Français"
+  },
+
+  "links": {
+    "title": "Liens",
+
+    "documentation": "Documentation",
+    "forums": "Forums communautaires",
+    "freeAssets": "Assets gratuits"
+  }
 }

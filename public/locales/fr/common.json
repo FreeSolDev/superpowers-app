@@ -1,7 +1,42 @@
 {
   "activeLanguage": "Français",
   
+  "none": "(None)",
+  
+  "actions": {
+    "cancel": "Annuler",
+    "clear": "Vider",
+    "close": "Fermer",
+    "skip": "Ignorer",
+    "save": "Sauvegarder",
+    "download": "Télécharger",
+    "install": "Installer",
+    "uninstall": "Désinstaller",
+    "open": "Ouvrir",
+    "refresh": "Rafraîchir",
+    "update": "Mettre à jour",
+    "show": "Montrer",
+    "hide": "Cacher"
+  },
+
   "states": {
     "loading": "Chargement..."
+  },
+
+  "server": {
+    "hostname": "Nom d'hôte",
+    "hostnamePlaceholder": "Nom de domaine ou adresse IP du serveur",
+    "port": "Port",
+    "label": "Label",
+    "password": "Mot de passe",
+
+    "connecting": "Connexion à ${baseUrl}...",
+    "tryAgain": "Réessayer",
+    "errors": {
+      "superpowersJSON": "Impossible de télécharger ${baseUrl}/superpowers.json",
+      "incorrectPassword": "Mauvais mot de passe pour ${baseUrl}",
+      "notSuperpowers": "Le serveur ${baseUrl} ne semble pas exécuter Superpowers",
+      "incompatibleVersion": "Le serveur ${baseUrl} exécute une version incompatible de Superpowers (version serveur: ${serverVersion}, version attendu: ${appVersion})"
+    }
   }
 }
