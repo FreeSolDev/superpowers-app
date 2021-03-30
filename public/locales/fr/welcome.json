@@ -1,0 +1,26 @@
+{
+  "title": "Bienvenue sur Superpowers!",
+  "prompt": "Superpowers vous permet de collaborer avec des gens du monde entier.",
+
+  "nickname": "Pseudonyme",
+  "connectToChat": "Se connecter au chat de la communauté",
+
+  "getStarted": "Commencer!",
+
+  "askGameInstall": {
+    "title": "Avant de commencer",
+    "prompt": "Superpowers utilise des systèmes pour vous permettre de créer différents types de projet. Celui le plus utilisé est le système \"Superpowers Game\", qui permet la creation de jeu 2D et 3D en HTML5. Voulez-vous installez ce système maintenant?",
+    "waiting": "Le système \"Superpowers Game\" est en cours d'installation. Cela peut prendre quelques minutes."
+  },
+
+  "serverInformation": {
+    "title": "Gestion du serveur local",
+    "info": "Vous pouvez gérer votre serveur local depuis le coin bas-gauche de l'application. Par défaut, l'application lance un serveur local automatiquement au démarrage.",
+    "gotIt": "Compris!"
+  },
+
+  "sidebarInformation": {
+    "title": "Liste de serveur",
+    "info": "La barre latérale sur la gauche contient vos serveurs favoris. Double-cliquez sur \"Mon Serveur\" pour accéder à votre serveur local et créer votre premier projet!"
+  }
+}

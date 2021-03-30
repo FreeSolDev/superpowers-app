@@ -1,0 +1,29 @@
+{
+  "presence": {
+    "online": "En ligne",
+    "away": "Absent",
+    "offline": "Hors ligne"
+  },
+  
+  "chat": {
+    "showIrcStatus": "Statut IRC"
+  },
+
+  "servers": {
+    "add": "Ajouter un serveur",
+    "edit": "Éditer le serveur",
+    "remove": "Enlever le serveur"
+  },
+
+  "addServer": {
+    "title": "Ajouter un serveur"
+  },
+
+  "editServer": {
+    "title": "Éditer un serveur"
+  },
+
+  "setNickname": {
+    "title": "Définir un pseudo"
+  }
+}

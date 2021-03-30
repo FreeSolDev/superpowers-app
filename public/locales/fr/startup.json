@@ -1,0 +1,23 @@
+{
+  "startingUp": "Démarrage de Superpowers...",
+  "failedToStart": "Impossible de démarrer l'application",
+  "startAnyway": "Démarrer quand même",
+
+  "errors": {
+    "couldNotGetDataPath": "Impossible de récupérer le chemin d'accès des données: ${details}",
+    "couldNotCreateUserDataFolder": "Impossible de créer le dossier utilisateur ici: ${userDataPath}. Raison: ${reason}.",
+    "couldNotLoadSettings": "Impossible de charger les paramètres depuis ${settingsPath}. Raison: ${reason}."
+  },
+
+  "updateAvailable": {
+    "app": "Superpowers ${latest} est disponible (vous utilisez Superpowers ${current}).",
+    "core": "Superpowers Core ${latest} est disponible (vous utilisez Superpowers Core ${current}).",
+    "systemsAndPlugins": "Les modules suivant ont une mise à jour disponible: ${systemsAndPlugins}."
+  },
+
+  "status": {
+    "installingCore": "Installation de la dernière version de Superpowers Core...",
+    "installingCoreSucceed": "Superpowers Core c'est installé avec succès",
+    "installingCoreFailed": "L'installation de Superpowers Core a échoué. ${error}"
+  }
+}

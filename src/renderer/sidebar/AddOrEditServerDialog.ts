@@ -77,7 +77,7 @@ export default class AddOrEditServerDialog extends BaseDialog<AddOrEditServerRes
 
     this.labelInputElt = document.createElement("input");
     this.labelInputElt.value = options.initialLabelValue;
-    this.labelInputElt.placeholder = "A name for your server";
+    this.labelInputElt.placeholder = i18n.t("common:server.labelPlaceholder");
     this.labelInputElt.style.flex = "1 1 0";
     labelRow.appendChild(this.labelInputElt);
 

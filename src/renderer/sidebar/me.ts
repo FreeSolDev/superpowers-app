@@ -22,11 +22,12 @@ nameElt.addEventListener("click", (event) => {
     title: i18n.t("sidebar:setNickname.title"),
     initialValue: nameElt.textContent,
     validationLabel: i18n.t("common:actions.update"),
+    cancelLabel: i18n.t("common:actions.cancel"),
     pattern: chat.nicknamePatternString,
     required: true
   };
 
-  new dialogs.PromptDialog("Enter a new nickname", options, (newNickname) => {
+  new dialogs.PromptDialog(i18n.t("sidebar:setNickname.title"), options, (newNickname) => {
     if (newNickname != null) {
       nameElt.textContent = newNickname;
       settings.setNickname(newNickname);

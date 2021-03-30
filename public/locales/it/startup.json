@@ -18,8 +18,6 @@
   "status": {
     "installingCore": "Installazione della più recente versione di Superpowers Core...",
     "installingCoreSucceed": "Superpowers Core installato correttamente.",
-    "installingCoreFailed": "Installazione di Superpowers Core fallita. ${error}",
-    "installingGame": "Installazione del più recente Game system...",
-    "installingGameFailed": "Installazione di Game system fallita. ${error}"
+    "installingCoreFailed": "Installazione di Superpowers Core fallita. ${error}"
   }
 }

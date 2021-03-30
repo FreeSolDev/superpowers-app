@@ -39,7 +39,7 @@ serversTreeView.on("activate", onServerActivate);
 
 function onAddServerClick(event: MouseEvent) {
   const addOrEditOptions = {
-    validationLabel: "Add",
+    validationLabel: i18n.t("common:actions.add"),
     initialHostnameValue: "",
     initialPortValue: "4237",
     initialLabelValue: "",

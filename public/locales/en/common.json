@@ -4,6 +4,7 @@
   "none": "(None)",
   
   "actions": {
+    "add": "Add",
     "cancel": "Cancel",
     "clear": "Clear",
     "close": "Close",
@@ -28,6 +29,7 @@
     "hostnamePlaceholder": "Server IP or domain name",
     "port": "Port",
     "label": "Label",
+    "labelPlaceholder": "A name for your server",
     "password": "Password",
 
     "connecting": "Connecting to ${baseUrl}...",

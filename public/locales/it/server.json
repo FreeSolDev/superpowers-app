@@ -40,11 +40,7 @@
     "authentication": {
       "title": "Autenticazione",
       "openToInternet": "Apri il server in internet",
-      "password": "Password",
-
-      "guestAccount": "Abilita account ospite temporanei",
-      "localAccount": "Abilita la creazione di account locali",
-      "externalServices": "Abilita l'accesso con servizi esterni"
+      "password": "Password"
     }
   },
 
