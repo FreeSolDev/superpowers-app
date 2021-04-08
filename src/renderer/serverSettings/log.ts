@@ -15,6 +15,7 @@ export function append(text: string) {
 
 function onClearLogButtonClick(event: MouseEvent) {
   event.preventDefault();
+  event.stopPropagation();
 
   logTextarea.value = "";
 }
