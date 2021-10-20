@@ -1,0 +1,29 @@
+{
+  "presence": {
+    "online": "متصل",
+    "away": "بعيد",
+    "offline": "غير متصل"
+  },
+  
+  "chat": {
+    "showIrcStatus": "إظهار حالة IRC"
+  },
+
+  "servers": {
+    "add": "أضف الخادم",
+    "edit": "تحرير الخادم",
+    "remove": "إزالة الخادم"
+  },
+
+  "addServer": {
+    "title": "أدخل تفاصيل الخادم"
+  },
+
+  "editServer": {
+    "title": "تحرير تفاصيل الخادم"
+  },
+
+  "setNickname": {
+    "title": "تعيين لقب"
+  }
+}

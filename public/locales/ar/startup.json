@@ -1,0 +1,25 @@
+{
+  "startingUp": "بدء سوبربورز...",
+  "failedToStart": "تعذر بدء التطبيق",
+  "startAnyway": "ابدأ على أي حال",
+
+  "errors": {
+    "couldNotGetDataPath": "تعذر الحصول على مسار البيانات: ${details}",
+    "couldNotCreateUserDataFolder": "تعذر إنشاء مجلد بيانات المستخدم في ${userDataPath}. السبب: ${reason}.",
+    "couldNotLoadSettings": "تعذر تحميل الإعدادات من ${settingsPath}. السبب: ${reason}."
+  },
+
+  "updateAvailable": {
+    "app": "سوبربورز ${latest} متاح (أنت تشغل حالياً ${current}).",
+    "core": "سوبربورز كور ${latest} متاح (أنت تشغ حالياً ${current}).",
+    "systemsAndPlugins": "العناصر التالية لديها تحديثات متاحة: ${systemsAndPlugins}."
+  },
+
+  "status": {
+    "installingCore": "جاري تنصيب أحدث نسخة من سوبربورز كور...",
+    "installingCoreSucceed": "تم بنجاح تنصيب سوبربورز كور.",
+    "installingCoreFailed": "تعذر تنصيب سوبربورز كور. ${error}",
+    "installingGame": "جاري تنصيب أحد منطومة العاب...",
+    "installingGameFailed": "تعذر تنصيب منظومة العاب سوبربورز. ${error}"
+  }
+}

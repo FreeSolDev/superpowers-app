@@ -1,0 +1,59 @@
+{
+  "myServer": "خادمي",
+  "autoConfigured": "(تم تهيئته تلقائياً)",
+  "log": "سجل الخادم",
+
+  "status": {
+  	"starting": "جاري تشغيل الخادم...",
+  	"started": "الخادم يشتغل.",
+  	"stopping": "جاري إيقاف الخادم...",
+  	"stopped": "الخادم متوقف.",
+    "updating": "جاري تحديث الخادم..."
+  },
+
+  "buttons": {
+    "settings": "الإعدادات",
+    "start": "بدأ",
+    "stop": "توقف"
+  },
+
+  "settings": {
+    "title": "إعدادات الخادم",
+    "error": "تعذر تحميل إعدادات الخادم",
+    "serverMustBeStopped": "يجب إيقاف الخادم قبل تعديل الإعدادات.",
+
+    "general": {
+      "title": "عام",
+
+      "serverName": "اسم الخادم",
+      "mainPort": "المنفذ الرئيسي",
+      "buildPort": "منفذ البناء",
+
+      "autoStart": "تشغيل الخادم تلقائيا عند تشغيل التطبيق"
+    },
+
+    "storage": {
+      "title": "التخزين",
+      "openProjectsFolder": "فتح مجلد المشاريع",
+      "recentBuilds": "الأحتفاظ بأخر بناء"
+    },
+
+    "authentication": {
+      "title": "المصادقة",
+      "openToInternet": "افتح الخادم على الإنترنت",
+      "password": "كلمة المرور",
+
+      "guestAccount": "قم بتمكين حسابات الضيوف المؤقتة",
+      "localAccount": "تمكين إنشاء الحساب المحلي",
+      "externalServices": "تمكين تسجيل الدخول مع الخوادم الخارجية"
+    }
+  },
+  
+  "systems": {
+    "title": "Systems and plugins",
+    "updateAll": "Update all",
+    "installed": "Installed version",
+    "latest": "Latest version",
+    "releaseNotes": "Release notes"
+  }
+}

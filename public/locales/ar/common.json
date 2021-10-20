@@ -1,0 +1,44 @@
+{
+  "activeLanguage": "العربية",
+  
+  "none": "(لاشيء)",
+  
+  "actions": {
+    "cancel": "إلغاء",
+    "clear": "صافًي",
+    "close": "أغلق",
+    "skip": "تخطي",
+    "save": "حفظ",
+    "download": "تنزيل",
+    "install": "تنصيب",
+    "uninstall": "إلغاء التنصيب",
+    "open": "فتح",
+    "refresh": "انعاش",
+    "update": "تحديث",
+    "show": "إظهار",
+    "hide": "إخفاء"
+  },
+
+  "states": {
+    "loading": "جار التحميل..."
+  },
+
+  "server": {
+    "hostname": "اسم المضيف",
+    "hostnamePlaceholder": "عنوان IP للخادم أو اسم المجال",
+    "port": "المنفذ",
+    "label": "عنوان",
+    "password": "كلمة المرور",
+
+    "connecting": "جاري الإتصال بـ ${baseUrl}...",
+    "tryAgain": "حاول مجدداً",
+    "errors": {
+      "superpowersJSON": "Could not download ${baseUrl}/superpowers.json.",
+      "superpowersJSON": "تعذر التنزيل ${baseUrl}/superpowers.json.",
+      "incorrectPassword": "كلمة مرور خاطئة لـ ${baseUrl}.",
+      "notSuperpowers": "الخادم عند ${baseUrl} لا يبدو أنه يشغل سوبربورز.",
+      "incompatibleVersion": "الخادم عند ${baseUrl} يشغل نسخة غير متوافقة من سوبربورز (تحصلى عل نسخة اصدار ${serverVersion}, كان متوقع الحصول على ${appVersion})."
+    }
+  }
+}
+

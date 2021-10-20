@@ -1,0 +1,27 @@
+{
+  "title": "الصفحة الرئيسية",
+
+  "tagline": "ثنائي و ثلاثي الأبعاد مصنٌع العاب للمطورين المستقلين. مجاني و مفتوح المصدر,&nbsp;<b>finally</b>.",
+
+  "news": {
+    "couldNotFetch": "تعذر إحضار آخر الأخبار."
+  },
+
+  "chatrooms": {
+    "title": "غرف الدردشة",
+
+    "en": "English - الانجليزي",
+    "fr": "French - الفرنسي"
+  },
+
+  "links": {
+    "title": "الروابط",
+
+    "documentation": "الوثائق",
+    "forums": "منتديات إجتماعية",
+    "patreon": "Patreon",
+    "openSource": "مفتوح المصدر",
+    "freeAssets": "معدات مجانية",
+    "teamSpeak": "TeamSpeak خادم"
+  }
+}
