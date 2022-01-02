@@ -1,7 +1,7 @@
 import { fork } from "child_process";
 import * as settings from "./settings";
 
-export default function forkSererProcess(extraArgs: string[] = []) {
+export default function forkServerProcess(extraArgs: string[] = []) {
   const serverPath = `${settings.corePath}/server/index.js`;
 
   const serverEnv: { [key: string]: string; } = {};
